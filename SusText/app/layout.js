@@ -1,3 +1,4 @@
+"use client"
 import { SocketProvider } from './context/page'
 import './globals.css'
 import { Inter } from 'next/font/google'
