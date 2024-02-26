@@ -1,8 +1,22 @@
 const { Server } = require("socket.io");
+const express = require("express");
+const cors = require("cors");
+const app = expres();
 
-const io = new Server(8000, {
-  cors: true,
+app.use(cors({
+  origin: "https://your-frontend.vercel.app",
+  credentials: true  // If you're using cookies or other credentials
+}));
+
+// const io = new Server(8000, {
+//   cors: true,
+// });
+
+const server = app.listen(8000, () => {
+  console.log("Server running on port 8000");
 });
+
+const io = new Server(server);
 
 const emailToSocketIdMap = new Map();
 const socketidToEmailMap = new Map();
