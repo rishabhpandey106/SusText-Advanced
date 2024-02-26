@@ -19,4 +19,4 @@ const SocketProvider = (props) => {
   );
 };
 
-export default (SocketProvider , useSocket);
+export default { useSocket, SocketProvider };
