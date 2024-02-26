@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors({
-  origin: '*'
+  origin: 'https://sus-text-advanced-frontend.vercel.app'
 }));
 
 // const io = new Server(8000, {
