@@ -19,7 +19,11 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
-const io = new Server(server);
+const io = new Server(server, {
+  cors: {
+    origin: 'https://sus-text-advanced-frontend.vercel.app',
+  }
+});
 
 const emailToSocketIdMap = new Map();
 const socketidToEmailMap = new Map();
