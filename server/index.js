@@ -1,15 +1,15 @@
 const { Server } = require("socket.io");
 
-// const io = new Server(8000, {
-//   cors: true,
-// });
-
-const io = new Server({
-  cors: {
-    origin: "https://sus-text-advanced-frontend.vercel.app",
-    methods: ["GET", "POST"]
-  }
+const io = new Server(8000, {
+  cors: true,
 });
+
+// const io = new Server({
+//   cors: {
+//     origin: "https://sus-text-advanced-frontend.vercel.app",
+//     methods: ["GET", "POST"]
+//   }
+// });
 
 const emailToSocketIdMap = new Map();
 const socketidToEmailMap = new Map();
