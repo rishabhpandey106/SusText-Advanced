@@ -1,4 +1,3 @@
-"use client"
 class PeerService {
     constructor() {
       if (!this.peer) {
