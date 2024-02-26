@@ -5,7 +5,7 @@ const app = expres();
 
 app.use(cors({
   origin: "https://your-frontend.vercel.app",
-  credentials: true  // If you're using cookies or other credentials
+  credentials: true
 }));
 
 // const io = new Server(8000, {
