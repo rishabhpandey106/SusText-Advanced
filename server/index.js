@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors({
-  origin: "https://your-frontend.vercel.app",
+  origin: "https://sus-text-advanced-frontend.vercel.app",
   credentials: true  // If you're using cookies or other credentials
 }));
 
@@ -14,6 +14,10 @@ app.use(cors({
 
 const server = app.listen(8000, () => {
   console.log("Server running on port 8000");
+});
+
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
 });
 
 const io = new Server(server);
