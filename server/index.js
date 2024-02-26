@@ -3,10 +3,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors({
-  origin: "https://sus-text-advanced-frontend.vercel.app",
-  credentials: true  // If you're using cookies or other credentials
-}));
+app.use(cors());
 
 // const io = new Server(8000, {
 //   cors: true,
