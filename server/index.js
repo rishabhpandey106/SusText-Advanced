@@ -1,11 +1,11 @@
 const { Server } = require("socket.io");
 const express = require("express");
 const cors = require("cors");
-const app = expres();
 
+const app = express();
 app.use(cors({
   origin: "https://your-frontend.vercel.app",
-  credentials: true
+  credentials: true  // If you're using cookies or other credentials
 }));
 
 // const io = new Server(8000, {
