@@ -1,6 +1,6 @@
-import { SocketProvider } from './context/page'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { SocketProvider } from '../Components/context/page'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,10 +11,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <SocketProvider>
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-    </SocketProvider>
+    <SocketProvider><html lang="en">
+    <body className={inter.className}>{children}</body>
+  </html></SocketProvider>
+    
   )
 }

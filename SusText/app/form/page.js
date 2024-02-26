@@ -1,6 +1,6 @@
 "use client"
 import './page.css'
-import {useSocket} from '../context/page'
+import {useSocket} from '../../Components/context/page'
 import { useRouter } from 'next/navigation';
 import React , {useState , useCallback , useEffect} from 'react'
 
@@ -48,7 +48,7 @@ export default function Form() {
     };
 
   return (
-    <div>
+      <div>
         <h1>Lobby</h1>
         <form onSubmit={handleSubmitForm}>
             <label htmlFor='email'>Email ID </label>
