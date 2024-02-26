@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 
 const SocketContext = createContext(null);
 
-export const useSocket = () => {
+const useSocket = () => {
   const socket = useContext(SocketContext);
   return socket;
 };
@@ -19,4 +19,4 @@ const SocketProvider = (props) => {
   );
 };
 
-export default SocketProvider;
+export default (SocketProvider , useSocket);
