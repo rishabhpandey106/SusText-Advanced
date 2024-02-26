@@ -9,7 +9,7 @@ export const useSocket = () => {
   return socket;
 };
 
-export const SocketProvider = (props) => {
+const SocketProvider = (props) => {
   const socket = useMemo(() => io("localhost:8000"), []); //socket doesnt get initialized each time
 
   return (
@@ -18,3 +18,5 @@ export const SocketProvider = (props) => {
     </SocketContext.Provider>
   );
 };
+
+export default SocketProvider;
