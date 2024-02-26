@@ -10,7 +10,7 @@ export const useSocket = () => {
 };
 
 export const SocketProvider = (props) => {
-  const socket = useMemo(() => io("https://sus-text-advanced-server.vercel.app/"), []); //socket doesnt get initialized each time
+  const socket = useMemo(() => io("https://sus-text-advanced-server.vercel.app"), []); //socket doesnt get initialized each time
 
   return (
     <SocketContext.Provider value={socket}>
