@@ -4,12 +4,12 @@ import { io } from "socket.io-client";
 
 const SocketContext = createContext(null);
 
-const useSocket = () => {
+export const useSocket = () => {
   const socket = useContext(SocketContext);
   return socket;
 };
 
-const SocketProvider = (props) => {
+export const SocketProvider = (props) => {
   const socket = useMemo(() => io("localhost:8000"), []); //socket doesnt get initialized each time
 
   return (
@@ -18,5 +18,3 @@ const SocketProvider = (props) => {
     </SocketContext.Provider>
   );
 };
-
-export default { useSocket, SocketProvider };
