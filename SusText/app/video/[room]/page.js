@@ -5,7 +5,7 @@ import peer from "../../../Components/services/peer"
 import React , {useEffect , useCallback, useState}from "react"
 import ReactPlayer from "react-player"
 import { usePathname,useParams } from 'next/navigation';
-import { useSocket } from '../../../Components/context/page';
+import { useSocket } from '../../../context/page';
 
 export default function Room({props}) {
     const anme = usePathname();
