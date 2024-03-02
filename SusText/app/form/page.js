@@ -1,6 +1,6 @@
 "use client"
 import './page.css'
-import {useSocket} from '../../context/page'
+import {useSocket} from '../../context/Context'
 import { useRouter } from 'next/navigation';
 import React , {useState , useCallback , useEffect} from 'react'
 
